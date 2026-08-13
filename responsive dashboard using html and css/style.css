@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: brown;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+body {
+  background-color: rgb(209, 198, 209);
+  display: flex;
+}
+
+.menu {
+  background-color: #fff;
+  width: 50px;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 18px;
+}
+.profile .img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+  border: 3px solid brown;
+  flex-shrink: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.menu ul {
+  list-style: none;
+  position: relative;
+  height: 95%;
+}
+
+.menu ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  transition: 0.5s;
+}
+
+.menu:hover {
+  width: 260px;
+}
+.menu ul li a:hover,
+.active {
+  background-color: rgba(61, 5, 5, 0.333);
+}
+
+.menu ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: rgb(49, 5, 5);
+  transition: 0.5s;
+  margin: auto;
+}
+.menu ul li:hover:after {
+  width: 100%;
+}
+.menu .logout {
+  position: absolute;
+  bottom: 10px;
+  background-color: rgba(206, 7, 7, 0.746);
+  width: 100%;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+.menu .logout i{
+    color: #fff;
+}
+.menu .logout p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.menu ul li a i {
+  font-size: 25px;
+}
+
+/* content */
+
+.content {
+  width: 100%;
+}
+
+.content .header {
+  background-color: rgb(243, 233, 233);
+  padding: 10px;
+  margin: 8px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.data-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  flex-basis: 200px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin: 5px;
+  border-bottom: 2px solid brown;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.box i {
+  font-size: 30px;
+}
+
+.box .data {
+    text-align: center;
+}
+.box .data  span{
+    font-size: 35px;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-spacing :8px;
+}
+
+td ,th {
+    border-radius: 10px;
+    height: 40px;
+    background-color: #fff;
+}
+th {
+    background: brown;
+    color: #fff;
+}
+table .price {
+    background-color: greenyellow ;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.count {
+    background-color: yellow;
+     padding: 6px;
+    border-radius: 5px;
+}
