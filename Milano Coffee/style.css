@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-color: #f1f1f1;
+  --bg-secondary: #fbfbfb;
+  --dark-gary: #333;
+  --light-brown: #c7a17a;
+  --black: #1f2226;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+  color: var(--dark-gary);
+}
+
+p {
+  line-height: 25px;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.text-primary {
+  color: var(--light-brown);
+}
+/* Header Start  */
+
+#header {
+  position: fixed;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+}
+
+#header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#header .navbar .logo {
+  width: 300px;
+}
+#header .navbar ul {
+  display: flex;
+}
+
+#header .navbar ul a {
+  text-decoration: none;
+  color: var(--dark-gary);
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+#header .navbar ul a:hover {
+  color: var(--light-brown);
+}
+
+#header.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  transition: 0.4s;
+}
+/* Header End  */
+
+/* Home Start */
+#home {
+  background: url("/imgs/home-bg.png") center no-repeat;
+  background-size: 100%;
+  background-color: var(--bg-color);
+}
+
+#home .home-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  align-items: center;
+  gap: 3rem;
+}
+.home-content .content-text h3 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.home-content .content-text h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.home-content .content-text p {
+  margin: 10px 0;
+}
+
+.home-content .content-text .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--light-brown);
+  color: var(--bg-secondary);
+  padding: 15px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.home-content .content-text .btn:hover {
+  background-color: var(--dark-gary);
+}
+.home-content .content-text .btn i {
+  margin-left: 5px;
+}
+
+.home-content .content-img img {
+  display: block;
+  width: 100%;
+}
+/* Home End */
+
+/* About Start */
+
+#about,
+#menu و#testimonials,
+#contact {
+  padding: 6rem 0;
+}
+#about .container .about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 40px;
+}
+
+#about .about-img {
+  display: block;
+  width: 100%;
+}
+
+#about .about-content .content-text h2 {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#about .about-content .content-text .item {
+  margin: 2rem 0;
+}
+/* About End */
+
+/* Menu Start  */
+#menu {
+  background-color: var(--bg-secondary);
+}
+.heading {
+  text-align: center;
+}
+#menu span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#menu .heading h2 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#menu .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+  gap: 5rem;
+}
+
+#menu .row .col .item {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  background-color: var(--bg-color);
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+}
+
+.col .item img {
+  width: 80px;
+  margin-left: -50px;
+}
+
+.col .item .details {
+  margin-left: 20px;
+}
+.col .item .details h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.col .item .price {
+  border-left: 1px solid #eee;
+  padding: 20px;
+  margin: auto;
+}
+
+/* Menu End */
+
+/* testimonials start */
+
+#testimonials {
+  margin-top: 6rem;
+}
+
+#testimonials .heading {
+  text-align: center;
+}
+#testimonials .heading h3 {
+  font-size: 40px;
+  font-weight: 600;
+}
+#testimonials .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 6rem 0;
+  gap: 2.5rem;
+}
+#testimonials .row .item {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 25px 25px 35px;
+}
+#testimonials .row .item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-top: -50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#testimonials .row .item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+/* testimonials end */
+
+/* contact  start*/
+#contact {
+  background-color: var(--bg-color);
+}
+#contact .heading span {
+  font-size: 20px;
+  font-weight: 600;
+}
+#contact .heading h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+#contact .row {
+  display: grid;
+  grid-template-columns: 2fr 1.4fr;
+  margin: 2rem;
+}
+
+#contact .row .contact-content {
+  background-color: #fff;
+  padding: 2.5rem;
+}
+#contact .row .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#contact .row .contact-content h3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+#contact .row .contact-content input,
+#contact .row .contact-content textarea {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+#contact .row .contact-content input:hover,
+#contact .row .contact-content textarea:hover {
+  border: 1px solid var(--light-brown);
+}
+
+#contact .row .contact-content .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  color: #fff;
+  background-color: var(--dark-gary);
+  margin: 15px 0;
+  transition: 0.4s;
+}
+#contact .row .contact-content .btn-submit:hover {
+  background-color: var(--light-brown);
+}
+
+/* contact  end*/
+
+#footer .footer-top {
+  background: url(imgs/footer-bg.png);
+
+  color: #fff;
+}
+#footer .row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+#footer .row .col {
+  padding: 30px;
+}
+#footer .row .col h4 {
+  margin-bottom: 15px;
+}
+#footer .row .col p {
+  width: 400px;
+}
+#footer .row .col ul li {
+  margin: 10px 0;
+}
+
+#footer .copyright {
+  background-color: #333;
+  padding: 30px 0;
+  color: #fff;
+  text-align: center;
+}
